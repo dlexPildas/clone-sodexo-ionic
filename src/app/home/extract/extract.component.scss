@@ -1,0 +1,81 @@
+ion-title {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ion-header {
+  ion-toolbar {
+    ion-buttons {
+      ion-icon {
+        font-size: 20px;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+ion-content {
+  ion-list {
+    ion-item {
+      ion-label {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        small {
+          margin-bottom: 5px;
+          letter-spacing: 0.5px;
+        }
+
+        span {
+          font-size: 12px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 500;
+          letter-spacing: 0.5px;
+        }
+      }
+
+      span {
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+ion-footer {
+  ion-toolbar {
+    display: flex;
+    align-items: center;
+    height: 70px;
+
+    ion-item {
+        ion-label {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-size: 14px;
+                margin-bottom: 2px;
+                letter-spacing: 0.5px;
+            }
+
+            small {
+                letter-spacing: 0.5px;
+                font-size: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+
+        span {
+            letter-spacing: 1px;
+            // font-size: 1px;
+        }
+    }
+  }
+}
+
+.inputMoney {
+  color: rgb(9, 173, 9);
+}

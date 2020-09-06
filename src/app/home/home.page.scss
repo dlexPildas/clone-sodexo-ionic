@@ -1,27 +1,34 @@
-#container {
-  text-align: center;
+ion-content {
+    position: relative;
+    .optionsCard {
+        margin-top: 30px;
+        margin-left: 10px;
+    }
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+    background: crimson;
+
+    span {
+        font-weight: bold;
+        color: #333;
+    }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.backgroud {
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    background: #2a2d83;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.card {
+    padding: 5px 10px;
 }
 
-#container a {
-  text-decoration: none;
+.optionsCard {
+    padding: 0px 10px;
+}
+
+ion-label {
+    margin-top: 2px;
+    font-size: 12px;
 }

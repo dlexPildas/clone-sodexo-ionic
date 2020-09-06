@@ -1,0 +1,88 @@
+ion-card {
+    ion-card-header {
+        margin-top: 20px;
+        min-height: 40px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        span {
+            letter-spacing: 2px;            
+        }
+
+        img {
+            height: 40px;
+        }
+    }
+}
+
+ion-card {
+    ion-card-content {
+        margin: 5px 0;
+        min-height: 140px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .price {
+            display: flex;
+            align-items: center;
+            font-size: 36px;
+            color: #2a2d83;
+
+            small {
+                font-size: 20px;
+            }
+
+            span {
+                margin-left: 10px;
+                font-weight: 550;
+            }
+        }
+
+        .info {
+            margin: 15px 0;
+        }
+
+        .nextRecharge {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 15px 0;
+
+            .noScheduled {
+                color: #000;
+            }
+        }
+    }
+} 
+
+.footer {
+    min-height: 75px;
+    background: rgb(246, 245, 245, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    span {
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #2a2d83;
+        font-weight: bold;
+        letter-spacing: 1.5;
+    }
+
+    ion-icon {
+        margin-left: 5px;
+        font-size: 18px;
+        color: #2a2d83;
+    }  
+}
+
+.ripple-parent {
+    position: relative;
+    overflow: hidden;
+  }
