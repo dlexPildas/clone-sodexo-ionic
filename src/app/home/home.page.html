@@ -1,42 +1,83 @@
 <ion-content color="ligth">
   <div class="backgroud"></div>
 
+  <div #blocked class="no-blocked">
+    <div class="info ion-padding">
+      <strong>Bloquear</strong>
+
+      <p>
+        Em caso de dúvidas sobre a solicitação de bloqueio do cartão, entre em
+        contato com o RH de sua empresa.
+        <span>Por favor, informe o motivo do cancelamento</span>
+      </p>
+
+      <div class="reason">
+        <ion-chip>
+          <ion-label>Perda</ion-label>
+        </ion-chip>
+        <ion-chip>
+          <ion-label>Roubo</ion-label>
+        </ion-chip>
+        <ion-chip>
+          <ion-label>Danificado</ion-label>
+        </ion-chip>
+      </div>
+
+      <div class="actions">
+        <ion-button expand="full" shape="round" color="primary"
+          >BLOQUEAR</ion-button
+        >
+        <ion-button
+          (click)="blockedCardInvisible()"
+          fill="clear"
+          expand="full"
+          shape="round"
+          color="primary"
+          >Cancelar</ion-button
+        >
+      </div>
+    </div>
+  </div>
+
   <div class="card">
     <app-card></app-card>
   </div>
-  
 
   <div class="optionsCard">
     <span>Opoçoes do cartão</span>
-    <app-slide [optionsCard]="optionsCard"></app-slide>
+    <app-slide
+      (blockedCard)="blockedCardVisible()"
+      [optionsCard]="optionsCard"
+    ></app-slide>
   </div>
-  
+
+  <div class="footer">
+    <!-- <ion-toolbar> -->
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button>
+            <ion-icon name="card-outline"></ion-icon>
+            <ion-label>Cartões</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button>
+            <ion-icon name="home-outline"></ion-icon>
+            <ion-label>Onde usar</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button>
+            <ion-icon name="cash-outline"></ion-icon>
+            <ion-label>Descontos</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button>
+            <ion-icon name="person-outline"></ion-icon>
+            <ion-label>Meu Perfil</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    <!-- </ion-toolbar> -->
+  </div>
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-tabs>
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button >
-          <ion-icon name="card-outline"></ion-icon>
-          <ion-label>Cartões</ion-label>
-        </ion-tab-button>
-    
-        <ion-tab-button >
-          <ion-icon name="home-outline"></ion-icon>
-          <ion-label>Onde usar</ion-label>
-        </ion-tab-button>
-    
-        <ion-tab-button>
-          <ion-icon name="cash-outline"></ion-icon>
-          <ion-label>Descontos</ion-label>
-        </ion-tab-button>
-    
-        <ion-tab-button>
-          <ion-icon name="person-outline"></ion-icon>
-          <ion-label>Meu Perfil</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-tabs>
-  </ion-toolbar>
-</ion-footer>
+<ion-footer> </ion-footer>

@@ -1,3 +1,4 @@
+import { PasswordComponent } from './home/password/password.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ExtractComponent } from './home/extract/extract.component';
@@ -15,6 +16,14 @@ const routes: Routes = [
   {
     path: 'extract',
     component: ExtractComponent
+  },
+  {
+    path: 'forgot-password',
+    component: PasswordComponent
+  },
+  {
+    path: 'update-password/:isUpdate',
+    component: PasswordComponent
   }
 
 ];

@@ -1,7 +1,7 @@
 <ion-content>
   <ion-slides pager="false" [options]="slideOpts">
     <ion-slide *ngFor="let item of optionsCard">
-      <div class="card ion-activatable ripple-parent">
+      <div (click)="action($event, item)" class="card ion-activatable ripple-parent">
         <ion-icon [name]="item.icon"></ion-icon>
         <span>{{item.text}}</span>
         <ion-ripple-effect></ion-ripple-effect>

@@ -1,34 +1,96 @@
 ion-content {
-    position: relative;
-    .optionsCard {
-        margin-top: 30px;
-        margin-left: 10px;
-    }
+  position: relative;
 
-    background: crimson;
+  .optionsCard {
+    margin-top: 30px;
+    margin-left: 10px;
 
     span {
-        font-weight: bold;
-        color: #333;
+      font-weight: bold;
+      color: #333;
     }
+  }
 }
 
 .backgroud {
-    position: absolute;
-    height: 40%;
-    width: 100%;
-    background: #2a2d83;
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background: #2a2d83;
 }
 
 .card {
-    padding: 5px 10px;
+  position: relative;
+  z-index: 10;
+  padding: 5px 10px;
 }
 
 .optionsCard {
-    padding: 0px 10px;
+  padding: 0px 10px;
 }
 
 ion-label {
-    margin-top: 2px;
-    font-size: 12px;
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.no-blocked {
+    display: none;
+}
+
+.blocked {
+  position: absolute;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background: rgb(0, 0, 0, 0.3);
+
+  display: flex;
+  align-items: flex-end;
+
+  .info {
+    background: #fff;
+    height: 40%;
+
+    strong {
+      font-size: 12px;
+    }
+
+    p {
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        margin-top: 10px;
+      }
+    }
+
+    .reason {
+      width: 100%;
+      display: flex;
+
+      ion-chip {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .actions {
+      ion-button {
+        font-size: 8px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.none {
+  display: none;
+}
+
+.footer {
+  // height: 100px;
+ 
 }

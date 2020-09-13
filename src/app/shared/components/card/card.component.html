@@ -1,27 +1,30 @@
 <ion-card>
-    <ion-card-header>
-        <img src="../../../../assets/refeicao_pass.png" alt="">
-        <span>
-            <small>FINAL</small>
-            9813
-        </span>
-    </ion-card-header>
+  <ion-card-header>
+    <img src="../../../../assets/refeicao_pass.png" alt="logo" />
+    <span>
+      <small>FINAL</small>
+      9813
+    </span>
+  </ion-card-header>
 
-    <ion-card-content>
-        <span class="price">
-            <small>R$</small>
-            <span>350,13</span>
-        </span>
-        <span class="info">Atualizado hoje às 08:45</span>
-        <div class="nextRecharge">
-            <span>Próxima recarga</span>
-            <span class="noScheduled">Não agendado</span>
-        </div>
-    </ion-card-content>
-
-    <div (click)="navigateToExtract()" class="footer ion-activatable ripple-parent">
-        <ion-ripple-effect></ion-ripple-effect>
-        <span>VER MEU EXTRATO</span>
-        <ion-icon name="arrow-forward-outline"></ion-icon>
+  <ion-card-content>
+    <span class="price">
+      <small (click)="navigateToExtract()">R$</small>
+      <span>350,13</span>
+    </span>
+    <span class="info">Atualizado hoje às 08:45</span>
+    <div class="nextRecharge">
+      <span>Próxima recarga</span>
+      <span class="noScheduled">Não agendado</span>
     </div>
+  </ion-card-content>
+
+  <div
+    (click)="navigateToExtract()"
+    class="action ion-activatable ripple-parent"
+  >
+    <ion-ripple-effect></ion-ripple-effect>
+    <span>VER MEU EXTRATO</span>
+    <ion-icon name="arrow-forward-outline"></ion-icon>
+  </div>
 </ion-card>

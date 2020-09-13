@@ -1,3 +1,4 @@
+import { PasswordComponent } from './password/password.component';
 import { ExtractComponent } from './extract/extract.component';
 import { SlideComponent } from './../shared/components/slide/slide.component';
 import { CardComponent } from './../shared/components/card/card.component';
@@ -17,6 +18,6 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule,
   ],
-  declarations: [HomePage, CardComponent, SlideComponent, ExtractComponent]
+  declarations: [HomePage, CardComponent, SlideComponent, ExtractComponent, PasswordComponent]
 })
 export class HomePageModule {}

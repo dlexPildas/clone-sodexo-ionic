@@ -15,6 +15,7 @@ export class CardComponent implements OnInit {
   ngOnInit() {}
 
   navigateToExtract(): void {
+    console.log('opa')
     this.router.navigate(['/extract']);
   }
 

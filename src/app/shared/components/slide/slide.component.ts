@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-slide',
@@ -7,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SlideComponent implements OnInit {
   @Input() optionsCard: any[];
+  @Output() blockedCard = new EventEmitter();
 
   slideOpts = {
     slidesPerView: 2.6,
@@ -14,8 +16,22 @@ export class SlideComponent implements OnInit {
     speed: 400
   };
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {}
+
+  action(event: Event, action: any): void {
+    event.stopPropagation();
+    if (action.action) {
+      return this.enableBlockedCard();
+    }
+    this.router.navigate([`/${action.link}`]);
+  }
+
+  enableBlockedCard() {
+    this.blockedCard.emit();
+  }
 
 }
